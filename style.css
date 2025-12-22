@@ -42,7 +42,7 @@ body {
 .bento-item:hover {
     border-color: var(--accent-green);
     transform: translateY(-5px);
-    box-shadow: 0 0 20px rgba(35, 134, 54, 0.2); /* Glow-Effekt beim Hover */
+    box-shadow: 0 0 20px rgba(35, 134, 54, 0.2); /* Glow-Effekt beim Hovern */
 }
 
 .wide { grid-column: span 2; }
