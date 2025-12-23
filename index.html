@@ -3,98 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio | Name </title>
+    <title>Portfolio | Name</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-	<canvas id="canvas-bg"></canvas>
-  <div class="container">
-    <header id="whoami" class="bento-item hero">
-        <div class="hero-content">
-            <div class="hero-text">
-                <h1>> $ WHOAMI</h1>
-                <p class="subtitle">IT-Security Specialist | Mobile App Pentesting</p>
-                <div class="certification-container">
-                    <a href="https://www.isaca.de/seminare/zertifikate/zerifikatsregister.html?q=Name" target="_blank" class="cert-link">
-                        <div class="cert-badge">
-                            <span class="cert-icon">🛡️</span>
-                            <span class="cert-text">CSP (ISACA/BSI)</span>
-                        </div>
-                    </a>
-                    <a href="#" class="cert-link">
-                        <div class="cert-badge">
-                            <span class="cert-icon">📊</span>
-                            <span class="cert-text">ISO 9001 QB</span>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="htb-placeholder">
-                <a href="https://app.hackthebox.com/users/Name" target="_blank">
-                    <img src="https://www.hackthebox.eu/badge/image/Name" alt="Hack The Box" class="htb-img">
-                </a>
-            </div>
-        </div>
-    </header>
+    <canvas id="canvas-bg" aria-hidden="true"></canvas>
 
-    <main class="bento-grid">
-        <section id="experience" class="bento-item wide">
-            <h2>> $ CAT EXPERIENCE.txt</h2>
-            <div class="timeline-container">
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <h3>Name (Aktuell)</h3>
-                        <p>Mobile Application Penetration Tester & IT-Sicherheitsexperte</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <h3>Name</h3>
-                        <p>Digital Security Lab – Recherche, Anleitungen, Bedrohungsanalysen</p>
-                    </div>
-                </div>
+    <div class="container">
+        <nav class="main-nav bento-item">
+            <div class="nav-left">
+                <span class="logo">> $ Name</span>
             </div>
-        </section>
+            
+            <ul class="nav-links">
+                <li><a href="#" onclick="showPage('home')">Home</a></li>
+                <li><a href="#" onclick="showPage('about')">About me</a></li>
+                <li><a href="#" onclick="showPage('writeups')">Write-ups</a></li>
+                <li><a href="#" onclick="showPage('contact')">Kontakt</a></li>
+            </ul>
 
-        <section id="expertise" class="bento-item">
-            <h2>> $ LS ./SKILLS</h2>
-            <div class="skill-tags">
-                <span class="tag">OWASP MASTG</span>
-				<span class="tag">OWASP MASVS</span>
-                <span class="tag">Frida</span>
-                <span class="tag">Objection</span>
-                <span class="tag">Jadx</span>
-                <span class="tag">Burp Suite</span>
-				<span class="tag">Wireshark</span>
-                <span class="tag">Python</span>
-				<span class="tag">Java</span>
-				<span class="tag">Bash</span>
-				<span class="tag">Nmap</span>
+            <div class="mode-switch-container">
+                <span class="mode-label">Manager</span>
+                <label class="switch">
+                    <input type="checkbox" id="mode-toggle" onclick="toggleMode()">
+                    <span class="slider round"></span>
+                </label>
+                <span class="mode-label">IT</span>
             </div>
-        </section>
+        </nav>
 
-		/* Dummy-Funktion */
-        <section id="tools" class="bento-item">
-            <h2>> $ RUN ANALYZER</h2>
-            <div class="tool-box-mini">
-                <input type="text" id="urlInput" placeholder="https://target.com">
-                <button onclick="checkHeaders()">SCAN</button>
-                <div id="resultArea" class="terminal-output">Ready...</div>
-            </div>
-        </section>
+        <div id="content-area"></div>
 
-        <section id="github" class="bento-item wide">
-            <h2>> $ GIT LOG</h2>
-            <div class="stats-wrapper">
-                <img src="https://github-readme-stats.vercel.app/api?username=c-b-g-e&show_icons=true&theme=tokyonight&hide_border=true&cache_seconds=1800" alt="Stats">
-            </div>
-        </section>
-    </main>
+        <footer class="bento-item">
+            <p>© 2026 | <a href="security.txt">security.txt</a> | <a href="https://github.com/c-b-g-e">GitHub</a></p>
+        </footer>
+    </div>
 
-    <footer>
-        <p>© 2025 | <a href="/security.txt">security.txt</a> | <a href="https://github.com/c-b-g-e">GitHub</a></p>
-    </footer>
-</div>
+    <script src="script.js"></script>
+</body>
+</html>
